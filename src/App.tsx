@@ -8,6 +8,7 @@ import { Trash } from 'tabler-icons-react'
 import { v4 as uuidv4 } from 'uuid'
 import { Login, Button, Rectangle } from './components'
 import { Layout, Rectangular, User } from '@types'
+import { Helmet } from 'react-helmet'
 
 const App = () => {
   const [rects, setRects] = useState<Rectangular[]>([])
@@ -71,6 +72,9 @@ const App = () => {
 
   return user ? (
     <>
+      <Helmet>
+        <title>A simple layout builder</title>
+      </Helmet>
       <div className="h-screen p-2 hidden md:block">
         <div className="flex gap-5">
           <div className="flex flex-col justify-between gap-2 w-3/12 min-h-screen">
